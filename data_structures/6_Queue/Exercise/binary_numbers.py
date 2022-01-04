@@ -22,10 +22,12 @@ class Queue:
 
     def front(self):
         return self.buffer[-1]
+    #CR comment: I think rear term should be used here. [-1] is the rear of the queue. using front is slightly confusing. Though it won't affect the outcome
 
 def produce_binary_numbers(n):
     numbers_queue = Queue()
     numbers_queue.enqueue("1")
+#CR comment: "1" is string type
 
     for i in range(n):
         front = numbers_queue.front()
